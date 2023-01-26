@@ -1,13 +1,15 @@
 import React from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import Nav from './Nav';
 
 const Header = () => {
     return (
-        <div>
+        <header className="site-header sticky-top">
             <Breadcrumb>
             </Breadcrumb>
+            <Nav></Nav>
 
-        </div>
+        </header>
     );
 };
 

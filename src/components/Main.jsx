@@ -1,11 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import './Main.css';
 
 const Main = () => {
     return (
-        <div>
+        <main className="container d-flex flex-column">
             <Outlet />
-        </div>
+        </main>
     );
 };
 

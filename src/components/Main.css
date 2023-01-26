@@ -1,0 +1,5 @@
+.main {
+    width: 100vw;
+    padding: 1rem;
+    background-color: linear-gradient(to top right, rgb(94, 94, 111), rgb(162, 162, 203));
+}
