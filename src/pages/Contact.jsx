@@ -1,5 +1,6 @@
+import { toHaveFormValues } from '@testing-library/jest-dom/dist/matchers';
 import React, { useState } from 'react';
-import { Form, FormGroup, FormLabel } from 'react-bootstrap';
+import { Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap';
 
 const Contact = () => {
 
@@ -21,7 +22,8 @@ const Contact = () => {
             ...form,
             first_name: "",
             email: "",
-            message: ""
+            message: "",
+            canContact: false
         })
 
     }
@@ -32,16 +34,15 @@ const Contact = () => {
             <Form onChange={(e) => handleChange(e)}>
                 <FormGroup>
                     <FormLabel htmlFor="first_name"></FormLabel>
-                    <input type="text" className="form-control" place-holder="your name" id="first_name"></input>
-                    <label htmlFor="email"></label>
-                    <input type="email" className="form-control" placeholder="your email"></input>
-                    <label htmlFor="" className="form-check-label"></label>
-                    <input type="checkbox" className="form-check-input"></input>
-                    <label htmlFor="message"></label>
-                    <textarea name="message"></textarea>
-                    <button type="submit" onSubmit={(e) => handleSubmit(e)}></button>
+                    <FormControl type="text" className="form-control" aria-label="Name" placeholder="Your name" controlId="first_name"></FormControl>
+                    <FormLabel htmlFor="email"></FormLabel>
+                    <FormControl aria-label="email" type="email" className="form-control" controlId="email" placeholder="Your email"></FormControl>
+                    <FormLabel htmlFor="canContact" ></FormLabel>
+                    <FormControl type="checkbox" className="form-check-input" controlId="canContact"></FormControl>
+                    <FormLabel htmlFor="message"></FormLabel>
+                    <FormControl as="textarea" area-label="Message" name="message" placeholder="Message"></FormControl>
+                    <button type="submit" onSubmit={(e) => handleSubmit(e)}>Submit</button>
                 </FormGroup>
-
             </Form>
 
         </div >

@@ -3,14 +3,17 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from 'react-router-bootstrap';
+import Image from 'react-bootstrap/Image';
 
 
 const Navigation = () => {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand><img src="../assets/images/logoGreen.svg" alt="logo" />
-                </Navbar.Brand>
+                <LinkContainer to="/"><Navbar.Brand>
+                    <Image className="fluid" src="../assets/images/logoGreen.svg"></Image>
+                    <img src="../assets/images/logoGreen.svg" alt="logo" />
+                </Navbar.Brand></LinkContainer>
             </Container>
 
             <Navbar.Toggle></Navbar.Toggle>
