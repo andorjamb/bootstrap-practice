@@ -1,6 +1,6 @@
 import React from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import Nav from './Nav';
+import Nav from './Navigation';
 
 const Header = () => {
     return (

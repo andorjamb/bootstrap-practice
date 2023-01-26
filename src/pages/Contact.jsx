@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, InputGroup, Row, Button, FormGroup, FormLabel } from 'react-bootstrap';
+import { Form, FormGroup, FormLabel } from 'react-bootstrap';
 
 const Contact = () => {
 
